@@ -5,9 +5,16 @@ module.exports = {
         password: mongoose.String
     })),
     Account: mongoose.model('Account', new mongoose.Schema({
+        userIdentifier: mongoose.ObjectId,
         logOn: mongoose.String,
-        password: mongoose.String,
+        password: mongoose.String
+    })),
+    Session: mongoose.model('Session', new mongoose.Schema({
+        accountIdentifier: mongoose.ObjectId,
         accessToken: mongoose.String,
-        userIdentifier: mongoose.ObjectId
+        created: {
+            type: Date,
+            default: Date.now
+        }
     }))
 };
