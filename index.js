@@ -1,17 +1,17 @@
 var mongoose = require('mongoose');
 module.exports = {
     User: mongoose.model('User', new mongoose.Schema({
-        logOn: mongoose.String,
-        password: mongoose.String
+        logOn: 'string',
+        password: 'string'
     })),
     Account: mongoose.model('Account', new mongoose.Schema({
-        userIdentifier: mongoose.ObjectId,
-        logOn: mongoose.String,
-        password: mongoose.String
+        userIdentifier: 'ObjectId',
+        logOn: 'string',
+        password: 'string'
     })),
     Session: mongoose.model('Session', new mongoose.Schema({
-        accountIdentifier: mongoose.ObjectId,
-        accessToken: mongoose.String,
+        accountIdentifier: 'ObjectId',
+        accessToken: 'string',
         created: {
             type: Date,
             default: Date.now
