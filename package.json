@@ -1,6 +1,6 @@
 {
   "name": "nodejs-storage-authentication",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "mongoose": "^4.8.1"

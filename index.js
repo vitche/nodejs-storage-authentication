@@ -6,6 +6,7 @@ module.exports = {
     })),
     Account: mongoose.model('Account', new mongoose.Schema({
         userIdentifier: 'ObjectId',
+        id: 'string',
         logOn: 'string',
         password: 'string'
     })),
